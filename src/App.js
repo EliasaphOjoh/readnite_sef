@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import Nav from "./Nav";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Entry from './Entry';
 import Trending from './Trending';
-import Buttons from './Buttons'
+import Buttons from './Buttons';
 import Finance from './Finance';
 import Relationships from './Relationships';
 import Health from './Health';
@@ -162,6 +161,53 @@ import Womanisinterested from './Blogs/Womanisinterested.js';
 import Yellowish from './Blogs/Yellowish.js';
 import Yourself from './Blogs/Yourself.js';
 
+import Avocado from './Blogs/food/Avocado.js';
+import Baking from './Blogs/food/Baking.js';
+import Balancediet from './Blogs/food/Balancediet.js';
+import Busymeal from './Blogs/food/Busymeal.js';
+import Cheapcooking from './Blogs/food/Cheapcooking.js';
+import Cookingvalue from './Blogs/food/Cookingvalue.js';
+import Cookingskills from './Blogs/food/Cookingskills.js';
+import Dessertveges from './Blogs/food/Dessertveges.js';
+import Dinnerhosting from './Blogs/food/Dinnerhosting.js';
+import Exerciceloss from './Blogs/food/Exerciceloss.js';
+import Fermented from './Blogs/food/Fermented.js';
+import Foodallergies from './Blogs/food/Foodallergies.js';
+import Foodlabels from './Blogs/food/Foodlabels.js';
+import Foodmoodconnection from './Blogs/food/Foodmoodconnection.js';
+import Foodwaste from './Blogs/food/Foodwaste.js';
+import Globalcuisines from './Blogs/food/Globalcuisines.js';
+import Glutenfree from './Blogs/food/Glutenfree.js';
+import Goodbadfats from './Blogs/food/Goodbadfats.js';
+import Healthierfoods from './Blogs/food/Healthierfoods.js';
+import Healthychildren from './Blogs/food/Healthychildren.js';
+import Homemadesauce from './Blogs/food/Homemadesauce.js';
+import Kale from './Blogs/food/Kale.js';
+import Kidsnacks from './Blogs/food/Kidsnacks.js';
+import Kombucha from './Blogs/food/Kombucha.js';
+import Localproduce from './Blogs/food/Localproduce.js';
+import Mealplan from './Blogs/food/Mealplan.js';
+import Naturalflavors from './Blogs/food/Naturalflavors.js';
+import Notime from './Blogs/food/Notime.js';
+import Nutricious from './Blogs/food/Nutricious.js';
+import Nutringredients from './Blogs/food/Nutringredients.js';
+import Organicfood from './Blogs/food/Organicfood.js';
+import Plantbased from './Blogs/food/Plantbased.js';
+import Plantprotein from './Blogs/food/Plantprotein.js';
+import Quickmeals from './Blogs/food/Quickmeals.js';
+import Sauerkraut from './Blogs/food/Sauerkraut.js';
+import Shopping from './Blogs/food/Shopping.js';
+import Sustainable from './Blogs/food/Sustainable.js';
+import Taste from './Blogs/food/Taste.js';
+import Thanksgiving from './Blogs/food/Thanksgiving.js';
+import Tradcooking from './Blogs/food/Tradcooking.js';
+import Tradcooking2 from './Blogs/food/Tradcooking2.js';
+import Turmeric from './Blogs/food/Turmeric.js';
+import Uniquecuisines from './Blogs/food/Uniquecuisines.js';
+import Vegesindiet from './Blogs/food/Vegesindiet.js';
+import Worldflavors from './Blogs/food/Worldflavors.js';
+import Yorghurt from './Blogs/food/Yorghurt.js';
+
 function App(){
 const [isNavVisible, setNavVisible] = useState(true);
 
@@ -175,176 +221,222 @@ const [isNavVisible, setNavVisible] = useState(true);
   };
   
   return(
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <Router>
     <div className='tin'>
       <Buttons onClick={openMenu} isNavVisible={isNavVisible} />    
     <div className='app'>
-      <Nav isNavVisible={isNavVisible} closeMenu={closeMenu}/>
+      <Nav isNavVisible={isNavVisible} closeMenu={closeMenu} />
         
         <Routes>
-          <Route path="/Entry" element={<Entry />}></Route>
-          <Route path="/Finance" element={<Finance />}></Route>
-          <Route path="/Relationships" element={<Relationships />}></Route>
-          <Route path="/Personal" element={<Personal />}></Route>
-          <Route path="/Health" element={<Health />}></Route>
-          <Route path="/Food" element={<Food />}></Route>
-          <Route path="/Trending" element={<Trending />}></Route>
-          <Route path="/Gaming" element={<Gaming />}></Route>
+          <Route path="/Finance" element={<Finance />} />
+          <Route path="/Relationships" element={<Relationships />} />
+          <Route path="/Personal" element={<Personal />} />
+          <Route path="/Health" element={<Health />} />
+          <Route path="/Food" element={<Food />} />
+          <Route path="/Trending" element={<Trending />} />
+          <Route path="/Gaming" element={<Gaming />} />
           
-          <Route path="/Avoidgoingbroke" element={<Avoidgoingbroke />}></Route>
-          <Route path="/Behonest" element={<Behonest />}></Route>
-          <Route path="/Beromantichusband" element={<Beromantichusband />}></Route>
-          <Route path="/Breakupwithmen" element={<Breakupwithmen />}></Route>
-          <Route path="/Brushingteeth" element={<Brushingteeth />}></Route>
-          <Route path="/Buisnessideastotry" element={<Buisnessideastotry />}></Route>
-          <Route path="/Canyouswitchgears" element={<Canyouswitchgears />}></Route>
-          <Route path="/Couplemistakes" element={<Couplemistakes />}></Route>
-          <Route path="/Dealwithtoxicgirlfriend" element={<Dealwithtoxicgirlfriend />}></Route>
-          <Route path="/Developingfeelings" element={<Developingfeelings />}></Route>
-          <Route path="/Dontrush" element={<Dontrush />}></Route>
-          <Route path="/Downloadandroidgames" element={<Downloadandroidgames />}></Route>
-          <Route path="/Drugsforsex" element={<Drugsforsex />}></Route>
-          <Route path="/Everygirlneedstohear" element={<Everygirlneedstohear />}></Route>
-          <Route path="/Eyecontacts" element={<Eyecontacts />}></Route>
-          <Route path="/Fallslowly" element={<Fallslowly />}></Route>
-          <Route path="/First4moves" element={<First4moves />}></Route>
-          <Route path="/Foodsnotat60" element={<Foodsnotat60 />}></Route>
-          <Route path="/Hasnotmarriedyou" element={<Hasnotmarriedyou />}></Route>
-          <Route path="/Hatehusbands" element={<Hatehusbands />}></Route>
-          <Route path="/Keepfalling" element={<Keepfalling />}></Route>
-          <Route path="/Moneyrulesjeff" element={<Moneyrulesjeff />}></Route>
-          <Route path="/Neverhappen" element={<Neverhappen />}></Route>
-          <Route path="/Notmarry" element={<Notmarry />}></Route>
-          <Route path="/Painfulsex" element={<Painfulsex />}></Route>
-          <Route path="/Patientlies" element={<Patientlies />}></Route>
-          <Route path="/Personalfinancerules" element={<Personalfinancerules />}></Route>
-          <Route path="/Secretsnottotell" element={<Secretsnottotell />}></Route>
-          <Route path="/Sexistthings" element={<Sexistthings />}></Route>
-          <Route path="/Shescheating" element={<Shescheating />}></Route>
-          <Route path="/Simplesmartways" element={<Simplesmartways />}></Route>
-          <Route path="/Skillsthatwillpay" element={<Skillsthatwillpay />}></Route>
-          <Route path="/Sleepingwithonion" element={<Sleepingwithonion />}></Route>
-          <Route path="/Stillbroke" element={<Stillbroke />}></Route>
-          <Route path="/Touchwell" element={<Touchwell />}></Route>
-          <Route path="/Toxicgirlfriend" element={<Toxicgirlfriend />}></Route>
-          <Route path="/Unsexyhabbits" element={<Unsexyhabbits />}></Route>
-          <Route path="/Womansnipples" element={<Womansnipples />}></Route>
-          <Route path="/Womenaddictions" element={<Womenaddictions />}></Route>
-          <Route path="/Womenfear" element={<Womenfear />}></Route>
-          <Route path="/Womennotice" element={<Womennotice />}></Route>
+          <Route path="/Avoidgoingbroke" element={<Avoidgoingbroke />} />
+          <Route path="/Behonest" element={<Behonest />} />
+          <Route path="/Beromantichusband" element={<Beromantichusband />} />
+          <Route path="/Breakupwithmen" element={<Breakupwithmen />} />
+          <Route path="/Brushingteeth" element={<Brushingteeth />} />
+          <Route path="/Buisnessideastotry" element={<Buisnessideastotry />} />
+          <Route path="/Canyouswitchgears" element={<Canyouswitchgears />} />
+          <Route path="/Couplemistakes" element={<Couplemistakes />} />
+          <Route path="/Dealwithtoxicgirlfriend" element={<Dealwithtoxicgirlfriend />} />
+          <Route path="/Developingfeelings" element={<Developingfeelings />} />
+          <Route path="/Dontrush" element={<Dontrush />} />
+          <Route path="/Downloadandroidgames" element={<Downloadandroidgames />} />
+          <Route path="/Drugsforsex" element={<Drugsforsex />} />
+          <Route path="/Everygirlneedstohear" element={<Everygirlneedstohear />} />
+          <Route path="/Eyecontacts" element={<Eyecontacts />} />
+          <Route path="/Fallslowly" element={<Fallslowly />} />
+          <Route path="/First4moves" element={<First4moves />} />
+          <Route path="/Foodsnotat60" element={<Foodsnotat60 />} />
+          <Route path="/Hasnotmarriedyou" element={<Hasnotmarriedyou />} />
+          <Route path="/Hatehusbands" element={<Hatehusbands />} />
+          <Route path="/Keepfalling" element={<Keepfalling />} />
+          <Route path="/Moneyrulesjeff" element={<Moneyrulesjeff />} />
+          <Route path="/Neverhappen" element={<Neverhappen />} />
+          <Route path="/Notmarry" element={<Notmarry />} />
+          <Route path="/Painfulsex" element={<Painfulsex />} />
+          <Route path="/Patientlies" element={<Patientlies />} />
+          <Route path="/Personalfinancerules" element={<Personalfinancerules />} />
+          <Route path="/Secretsnottotell" element={<Secretsnottotell />} />
+          <Route path="/Sexistthings" element={<Sexistthings />} />
+          <Route path="/Shescheating" element={<Shescheating />} />
+          <Route path="/Simplesmartways" element={<Simplesmartways />} />
+          <Route path="/Skillsthatwillpay" element={<Skillsthatwillpay />} />
+          <Route path="/Sleepingwithonion" element={<Sleepingwithonion />} />
+          <Route path="/Stillbroke" element={<Stillbroke />} />
+          <Route path="/Touchwell" element={<Touchwell />} />
+          <Route path="/Toxicgirlfriend" element={<Toxicgirlfriend />} />
+          <Route path="/Unsexyhabbits" element={<Unsexyhabbits />} />
+          <Route path="/Womansnipples" element={<Womansnipples />} />
+          <Route path="/Womenaddictions" element={<Womenaddictions />} />
+          <Route path="/Womenfear" element={<Womenfear />} />
+          <Route path="/Womennotice" element={<Womennotice />} />
 
-          <Route path="/Abstenanceresults" element={<Abstenanceresults />}></Route>
-          <Route path="/Abracadabra" element={<Abracadabra />}></Route>
-          <Route path="/Backpaincauses" element={<Backpaincauses />}></Route>
-          <Route path="/Bloodpressure" element={<Bloodpressure />}></Route>
-          <Route path="/Brainexercises" element={<Brainexercises />}></Route>
-          <Route path="/Buildmuscle" element={<Buildmuscle />}></Route>
-          <Route path="/Aboutlove" element={<Aboutlove />}></Route>
-          <Route path="/Aboutmoney" element={<Aboutmoney />}></Route>
-          <Route path="/Attractivesingle" element={<Attractivesingle />}></Route>
-          <Route path="/Attractgoodmen" element={<Attractgoodmen />}></Route>
-          <Route path="/Backpaincauses" element={<Backpaincauses />}></Route>
-          <Route path="/Beautifulcomplements" element={<Beautifulcomplements />}></Route>
-          <Route path="/Beautifulwomen" element={<Beautifulwomen />}></Route>
-          <Route path="/Believeinyourself" element={<Believeinyourself />}></Route>
-          <Route path="/Bestpayinghustles" element={<Bestpayinghustles />}></Route>
-          <Route path="/Bitesherlip" element={<Bitesherlip />}></Route>
-          <Route path="/Bugattisecrets" element={<Bugattisecrets />}></Route>
-          <Route path="/Buisnessqns" element={<Buisnessqns />}></Route>
-          <Route path="/Camerashy" element={<Camerashy />}></Route>
-          <Route path="/Cancersigns" element={<Cancersigns />}></Route>
-          <Route path="/Causesofuti" element={<Causesofuti />}></Route>
-          <Route path="/Cervicalcancersigns" element={<Cervicalcancersigns />}></Route>
-          <Route path="/Commandments" element={<Commandments />}></Route>
-          <Route path="/Completelyinlove" element={<Completelyinlove />}></Route>
-          <Route path="/Confidentpeople" element={<Confidentpeople />}></Route>
-          <Route path="/Damageeyesight" element={<Damageeyesight />}></Route>
-          <Route path="/Drinkwater" element={<Drinkwater />}></Route>
-          <Route path="/Entrepreneurquotes" element={<Entrepreneurquotes />}></Route>
-          <Route path="/Erectilefruits" element={<Erectilefruits />}></Route>
-          <Route path="/Erectileremedies" element={<Erectileremedies />}></Route>
-          <Route path="/Exercises" element={<Exercises />}></Route>
-          <Route path="/Fallasleep" element={<Fallasleep />}></Route>
-          <Route path="/Flashandroid" element={<Flashandroid />}></Route>
-          <Route path="/Flightattendantrules" element={<Flightattendantrules />}></Route>
-          <Route path="/Fungames" element={<Fungames />}></Route>
-          <Route path="/Funsidehustles" element={<Funsidehustles />}></Route>
-          <Route path="/Gamers" element={<Gamers />}></Route>
-          <Route path="/Gamessofun" element={<Gamessofun />}></Route>
-          <Route path="/Harmingbrain" element={<Harmingbrain />}></Route>
-          <Route path="/Harshwomentruths" element={<Harshwomentruths />}></Route>
-          <Route path="/Heartdisease" element={<Heartdisease />}></Route>
-          <Route path="/Highprofitlowcost" element={<Highprofitlowcost />}></Route>
-          <Route path="/Howtheyearn" element={<Howtheyearn />}></Route>
-          <Route path="/Increaselibido" element={<Increaselibido />}></Route>
-          <Route path="/Itchingvagina" element={<Itchingvagina />}></Route>
-          <Route path="/Killstress" element={<Killstress />}></Route>
-          <Route path="/Kisswell" element={<Kisswell />}></Route>
-          <Route path="/Landroverprices" element={<Landroverprices />}></Route>
-          <Route path="/Lastinglonger" element={<Lastinglonger />}></Route>
-          <Route path="/Lastlongerfoods" element={<Lastlongerfoods />}></Route>
-          <Route path="/Lcingta5" element={<Lcingta5 />}></Route>
-          <Route path="/Legitmoney" element={<Legitmoney />}></Route>
-          <Route path="/Libertycitybased" element={<Libertycitybased />}></Route>
-          <Route path="/Loseconsciousness" element={<Loseconsciousness />}></Route>
-          <Route path="/Lovequotes" element={<Lovequotes />}></Route>
-          <Route path="/Makemoneyfast" element={<Makemoneyfast />}></Route>
-          <Route path="/Mandoesntlikeyou" element={<Mandoesntlikeyou />}></Route>
-          <Route path="/Maturitytests" element={<Maturitytests />}></Route>
-          <Route path="/Meltherheart" element={<Meltherheart />}></Route>
-          <Route path="/Menshdneverdo" element={<Menshdneverdo />}></Route>
-          <Route path="/Mentalrelaxation" element={<Mentalrelaxation />}></Route>
-          <Route path="/Millionairesteps" element={<Millionairesteps />}></Route>
-          <Route path="/Missingstrategies" element={<Missingstrategies />}></Route>
-          <Route path="/Moderncv" element={<Moderncv />}></Route>
-          <Route path="/Moneymoves" element={<Moneymoves />}></Route>
-          <Route path="/Moneymakingskills" element={<Moneymakingskills />}></Route>
-          <Route path="/Mosquitoplants" element={<Mosquitoplants />}></Route>
-          <Route path="/Mythicalmarijuana" element={<Mythicalmarijuana />}></Route>
-          <Route path="/Naturalpainkillers" element={<Naturalpainkillers />}></Route>
-          <Route path="/Neverloseon" element={<Neverloseon />}></Route>
-          <Route path="/Notinjobinterview" element={<Notinjobinterview />}></Route>
-          <Route path="/Offlineandroid" element={<Offlineandroid />}></Route>
-          <Route path="/Offlinepc" element={<Offlinepc />}></Route>
-          <Route path="/Onlineandroid" element={<Onlineandroid />}></Route>
-          <Route path="/Onlinepc" element={<Onlinepc />}></Route>
-          <Route path="/Oversleep" element={<Oversleep />}></Route>
-          <Route path="/Peeingontime" element={<Peeingontime />}></Route>
-          <Route path="/Playergirl" element={<Playergirl />}></Route>
-          <Route path="/Profitablebuisness" element={<Profitablebuisness />}></Route>
-          <Route path="/Questionsbeforeproposing" element={<Questionsbeforeproposing />}></Route>
-          <Route path="/Racinggames" element={<Racinggames />}></Route>
-          <Route path="/Retirecomfortably" element={<Retirecomfortably />}></Route>
-          <Route path="/Ruinrelationships" element={<Ruinrelationships />}></Route>
-          <Route path="/Sacheats" element={<Sacheats />}></Route>
-          <Route path="/Sexmistakeswomen" element={<Sexmistakeswomen />}></Route>
-          <Route path="/Signsofcancer" element={<Signsofcancer />}></Route>
-          <Route path="/Singleincome" element={<Singleincome />}></Route>
-          <Route path="/Sleepingwithpillow" element={<Sleepingwithpillow />}></Route>
-          <Route path="/Softencervix" element={<Softencervix />}></Route>
-          <Route path="/Stdscondomscant" element={<Stdscondomscant />}></Route>
-          <Route path="/Stopbeinglazy" element={<Stopbeinglazy />}></Route>
-          <Route path="/Strengthexercises" element={<Strengthexercises />}></Route>
-          <Route path="/Successrules" element={<Successrules />}></Route>
-          <Route path="/Supplements" element={<Supplements />}></Route>
-          <Route path="/Sweetnames" element={<Sweetnames />}></Route>
-          <Route path="/Talktoanyone" element={<Talktoanyone />}></Route>
-          <Route path="/Textingmistakes" element={<Textingmistakes />}></Route>
-          <Route path="/Thingsaboutmoney" element={<Thingsaboutmoney />}></Route>
-          <Route path="/Thingstohave" element={<Thingstohave />}></Route>
-          <Route path="/Thousanddollarskill" element={<Thousanddollarskill />}></Route>
-          <Route path="/Timewasters" element={<Timewasters />}></Route>
-          <Route path="/Toearn" element={<Toearn />}></Route>
-          <Route path="/Transformanger" element={<Transformanger />}></Route>
-          <Route path="/Ultimatewealth" element={<Ultimatewealth />}></Route>
-          <Route path="/Utiduringpregnancy" element={<Utiduringpregnancy />}></Route>
-          <Route path="/Womanisinterested" element={<Womanisinterested />}></Route>
-          <Route path="/Yellowish" element={<Yellowish />}></Route>
-          <Route path="/Yourself" element={<Yourself />}></Route>
+          <Route path="/Abstenanceresults" element={<Abstenanceresults />} />
+          <Route path="/Abracadabra" element={<Abracadabra />} />
+          <Route path="/Backpaincauses" element={<Backpaincauses />} />
+          <Route path="/Bloodpressure" element={<Bloodpressure />} />
+          <Route path="/Brainexercises" element={<Brainexercises />} />
+          <Route path="/Buildmuscle" element={<Buildmuscle />} />
+          <Route path="/Aboutlove" element={<Aboutlove />} />
+          <Route path="/Aboutmoney" element={<Aboutmoney />} />
+          <Route path="/Attractivesingle" element={<Attractivesingle />} />
+          <Route path="/Attractgoodmen" element={<Attractgoodmen />} />
+          <Route path="/Backpaincauses" element={<Backpaincauses />} />
+          <Route path="/Beautifulcomplements" element={<Beautifulcomplements />} />
+          <Route path="/Beautifulwomen" element={<Beautifulwomen />} />
+          <Route path="/Believeinyourself" element={<Believeinyourself />} />
+          <Route path="/Bestpayinghustles" element={<Bestpayinghustles />} />
+          <Route path="/Bitesherlip" element={<Bitesherlip />} />
+          <Route path="/Bugattisecrets" element={<Bugattisecrets />} />
+          <Route path="/Buisnessqns" element={<Buisnessqns />} />
+          <Route path="/Camerashy" element={<Camerashy />} />
+          <Route path="/Cancersigns" element={<Cancersigns />} />
+          <Route path="/Causesofuti" element={<Causesofuti />} />
+          <Route path="/Cervicalcancersigns" element={<Cervicalcancersigns />} />
+          <Route path="/Commandments" element={<Commandments />} />
+          <Route path="/Completelyinlove" element={<Completelyinlove />} />
+          <Route path="/Confidentpeople" element={<Confidentpeople />} />
+          <Route path="/Damageeyesight" element={<Damageeyesight />} />
+          <Route path="/Drinkwater" element={<Drinkwater />} />
+          <Route path="/Entrepreneurquotes" element={<Entrepreneurquotes />} />
+          <Route path="/Erectilefruits" element={<Erectilefruits />} />
+          <Route path="/Erectileremedies" element={<Erectileremedies />} />
+          <Route path="/Exercises" element={<Exercises />} />
+          <Route path="/Fallasleep" element={<Fallasleep />} />
+          <Route path="/Flashandroid" element={<Flashandroid />} />
+          <Route path="/Flightattendantrules" element={<Flightattendantrules />} />
+          <Route path="/Fungames" element={<Fungames />} />
+          <Route path="/Funsidehustles" element={<Funsidehustles />} />
+          <Route path="/Gamers" element={<Gamers />} />
+          <Route path="/Gamessofun" element={<Gamessofun />} />
+          <Route path="/Harmingbrain" element={<Harmingbrain />} />
+          <Route path="/Harshwomentruths" element={<Harshwomentruths />} />
+          <Route path="/Heartdisease" element={<Heartdisease />} />
+          <Route path="/Highprofitlowcost" element={<Highprofitlowcost />} />
+          <Route path="/Howtheyearn" element={<Howtheyearn />} />
+          <Route path="/Increaselibido" element={<Increaselibido />} />
+          <Route path="/Itchingvagina" element={<Itchingvagina />} />
+          <Route path="/Killstress" element={<Killstress />} />
+          <Route path="/Kisswell" element={<Kisswell />} />
+          <Route path="/Landroverprices" element={<Landroverprices />} />
+          <Route path="/Lastinglonger" element={<Lastinglonger />} />
+          <Route path="/Lastlongerfoods" element={<Lastlongerfoods />} />
+          <Route path="/Lcingta5" element={<Lcingta5 />} />
+          <Route path="/Legitmoney" element={<Legitmoney />} />
+          <Route path="/Libertycitybased" element={<Libertycitybased />} />
+          <Route path="/Loseconsciousness" element={<Loseconsciousness />} />
+          <Route path="/Lovequotes" element={<Lovequotes />} />
+          <Route path="/Makemoneyfast" element={<Makemoneyfast />} />
+          <Route path="/Mandoesntlikeyou" element={<Mandoesntlikeyou />} />
+          <Route path="/Maturitytests" element={<Maturitytests />} />
+          <Route path="/Meltherheart" element={<Meltherheart />} />
+          <Route path="/Menshdneverdo" element={<Menshdneverdo />} />
+          <Route path="/Mentalrelaxation" element={<Mentalrelaxation />} />
+          <Route path="/Millionairesteps" element={<Millionairesteps />} />
+          <Route path="/Missingstrategies" element={<Missingstrategies />} />
+          <Route path="/Moderncv" element={<Moderncv />} />
+          <Route path="/Moneymoves" element={<Moneymoves />} />
+          <Route path="/Moneymakingskills" element={<Moneymakingskills />} />
+          <Route path="/Mosquitoplants" element={<Mosquitoplants />} />
+          <Route path="/Mythicalmarijuana" element={<Mythicalmarijuana />} />
+          <Route path="/Naturalpainkillers" element={<Naturalpainkillers />} />
+          <Route path="/Neverloseon" element={<Neverloseon />} />
+          <Route path="/Notinjobinterview" element={<Notinjobinterview />} />
+          <Route path="/Offlineandroid" element={<Offlineandroid />} />
+          <Route path="/Offlinepc" element={<Offlinepc />} />
+          <Route path="/Onlineandroid" element={<Onlineandroid />} />
+          <Route path="/Onlinepc" element={<Onlinepc />} />
+          <Route path="/Oversleep" element={<Oversleep />} />
+          <Route path="/Peeingontime" element={<Peeingontime />} />
+          <Route path="/Playergirl" element={<Playergirl />} />
+          <Route path="/Profitablebuisness" element={<Profitablebuisness />} />
+          <Route path="/Questionsbeforeproposing" element={<Questionsbeforeproposing />} />
+          <Route path="/Racinggames" element={<Racinggames />} />
+          <Route path="/Retirecomfortably" element={<Retirecomfortably />} />
+          <Route path="/Ruinrelationships" element={<Ruinrelationships />} />
+          <Route path="/Sacheats" element={<Sacheats />} />
+          <Route path="/Sexmistakeswomen" element={<Sexmistakeswomen />} />
+          <Route path="/Signsofcancer" element={<Signsofcancer />} />
+          <Route path="/Singleincome" element={<Singleincome />} />
+          <Route path="/Sleepingwithpillow" element={<Sleepingwithpillow />} />
+          <Route path="/Softencervix" element={<Softencervix />} />
+          <Route path="/Stdscondomscant" element={<Stdscondomscant />} />
+          <Route path="/Stopbeinglazy" element={<Stopbeinglazy />} />
+          <Route path="/Strengthexercises" element={<Strengthexercises />} />
+          <Route path="/Successrules" element={<Successrules />} />
+          <Route path="/Supplements" element={<Supplements />} />
+          <Route path="/Sweetnames" element={<Sweetnames />} />
+          <Route path="/Talktoanyone" element={<Talktoanyone />} />
+          <Route path="/Textingmistakes" element={<Textingmistakes />} />
+          <Route path="/Thingsaboutmoney" element={<Thingsaboutmoney />} />
+          <Route path="/Thingstohave" element={<Thingstohave />} />
+          <Route path="/Thousanddollarskill" element={<Thousanddollarskill />} />
+          <Route path="/Timewasters" element={<Timewasters />} />
+          <Route path="/Toearn" element={<Toearn />} />
+          <Route path="/Transformanger" element={<Transformanger />} />
+          <Route path="/Ultimatewealth" element={<Ultimatewealth />} />
+          <Route path="/Utiduringpregnancy" element={<Utiduringpregnancy />} />
+          <Route path="/Womanisinterested" element={<Womanisinterested />} />
+          <Route path="/Yellowish" element={<Yellowish />} />
+          <Route path="/Yourself" element={<Yourself />} />
+
+          <Route path="/Avocado" element={<Avocado />} />
+          <Route path="/Baking" element={<Baking />} />
+          <Route path="/Balancediet" element={<Balancediet />} />
+          <Route path="/Busymeal" element={<Busymeal />} />
+          <Route path="/Cheapcooking" element={<Cheapcooking />} />
+          <Route path="/Cookingvalue" element={<Cookingvalue />} />
+          <Route path="/Cookingskills" element={<Cookingskills />} />
+          <Route path="/Dessertveges" element={<Dessertveges />} />
+          <Route path="/Dinnerhosting" element={<Dinnerhosting />} />
+          <Route path="/Exerciceloss" element={<Exerciceloss />} />
+          <Route path="/Fermented" element={<Fermented />} />
+          <Route path="/Foodallergies" element={<Foodallergies />} />
+          <Route path="/Foodlabels" element={<Foodlabels />} />
+          <Route path="/Foodmoodconnection" element={<Foodmoodconnection />} />
+          <Route path="/Foodwaste" element={<Foodwaste />} />
+          <Route path="/Globalcuisines" element={<Globalcuisines />} />
+          <Route path="/Glutenfree" element={<Glutenfree />} />
+          <Route path="/Goodbadfats" element={<Goodbadfats />} />
+          <Route path="/Healthierfoods" element={<Healthierfoods />} />
+          <Route path="/Healthychildren" element={<Healthychildren />} />
+          <Route path="/Homemadesauce" element={<Homemadesauce />} />
+          <Route path="/Kale" element={<Kale />} />
+          <Route path="/Kidsnacks" element={<Kidsnacks />} />
+          <Route path="/Kombucha" element={<Kombucha />} />
+          <Route path="/Localproduce" element={<Localproduce />} />
+          <Route path="/Mealplan" element={<Mealplan />} />
+          <Route path="/Naturalflavors" element={<Naturalflavors />} />
+          <Route path="/Notime" element={<Notime />} />
+          <Route path="/Nutricious" element={<Nutricious />} />
+          <Route path="/Nutringredients" element={<Nutringredients />} />
+          <Route path="/Organicfood" element={<Organicfood />} />
+          <Route path="/Plantbased" element={<Plantbased />} />
+          <Route path="/Plantprotein" element={<Plantprotein />} />
+          <Route path="/Quickmeals" element={<Quickmeals />} />
+          <Route path="/Sauerkraut" element={<Sauerkraut />} />
+          <Route path="/Shopping" element={<Shopping />} />
+          <Route path="/Sustainable" element={<Sustainable />} />
+          <Route path="/Taste" element={<Taste />} />
+          <Route path="/Thanksgiving" element={<Thanksgiving />} />
+          <Route path="/Tradcooking" element={<Tradcooking />} />
+          <Route path="/Tradcooking2" element={<Tradcooking2 />} />
+          <Route path="/Turmeric" element={<Turmeric />} />
+          <Route path="/Uniquecuisines" element={<Uniquecuisines />} />
+          <Route path="/Vegesindiet" element={<Vegesindiet />} />
+          <Route path="/Worldflavors" element={<Worldflavors />} />
+          <Route path="/Yorghurt" element={<Yorghurt />} />
         </Routes>
       </div>
       </div>
-      </BrowserRouter>
+      </Router>
     )
 }
 export default App;

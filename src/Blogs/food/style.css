@@ -94,7 +94,6 @@ icon{
 .panol{
 	color: white;
 	text-align: center;
-	background-image: url(./images/bravo.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	border: none;
@@ -251,7 +250,6 @@ font-family:nunito;
 	padding-left:65%;
 	padding-top: 15px;
 	padding-bottom: 10px;
-	background-image: url(./images/bkg1.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	border: none;
@@ -285,14 +283,13 @@ font-family:nunito;
 	padding-bottom:100px;
 }
 .nav{
-	margin-top:55px;
+	position:absolute;
 	display: block;
 	background-color:#001c41;	
 	width:90%;
 	height:70%;
 	margin-left:5%;
 	z-index: 50;
-	position:fixed;
 }
 .nav-brand{
 	margin-left: 55px;
@@ -339,18 +336,7 @@ icon{
 #tip{
 	width: 100%;
 }
-.panol{
-	padding-top: 20px;
-	text-align: center;
-	text-align: center;
-	background-image: url(./images/bkg3.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	border: none;
-	border-radius: 10px;
-	height: 170px;
-	font-weight:600;
-}
+
 .panol h1{
 	font-family: 'Quattrocento Sans', sans-serif;	
 	color:white;

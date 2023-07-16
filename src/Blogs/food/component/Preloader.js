@@ -9,9 +9,9 @@ const Preloader = () => {
 	return(
 		<div className='preloader'>
 		<div className='texts_container'>
-			<p>Embrace the power of Reading</p>
+			<span>Embrace the power of Reading</span>
 		</div>
 		</div>
-		)
+	)
 }
 export default Preloader;

@@ -14,6 +14,7 @@
 	align-items:center;
 	overflow:hidden;
 }
+
 .preloader .texts_container{
 	display:flex;
 	align-items:center;
@@ -47,16 +48,14 @@
 	.texts_container{
 		display:flex;
 		align-items:center;
-		text-align: center;
+		justify-content:space-between;
 		height:100px;
-		width:80%;
+		width:90%;
 		font-weight:800;
 		font-size:15px;
+		text-align:center;
 		overflow:hidden;
 		color:white;
-	}
-	.texts_container p{
-		text-align:center;
 	}
 
 }
